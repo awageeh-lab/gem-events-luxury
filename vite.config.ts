@@ -4,10 +4,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // CRITICAL: Fixes the black screen on GitHub/Vercel
+  base: './', 
   define: {
-    // Ensures the Gemini SDK can access the API key environment variable without errors
-    'process.env': process.env
+    // This shims process.env so the Gemini SDK doesn't crash in the browser
+    'process.env': {
+      API_KEY: JSON.stringify(process.env.API_KEY || '')
+    }
   },
   server: {
     port: 3000,
@@ -15,6 +17,13 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'lucide-react', '@google/genai'],
+        },
+      },
+    },
   }
 });

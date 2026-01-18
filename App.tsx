@@ -14,24 +14,30 @@ const App: React.FC = () => {
   const [isAdminMode, setAdminMode] = useState(false);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
 
-  // PRODUCTION CACHE SYNC: 
-  // This ensures that old 'Enquire' data in localStorage is cleared 
-  // when you deploy this new 'Inquire' version.
   useEffect(() => {
-    const CURRENT_VERSION = 'gem_v2.5_inquire_sync';
+    const CURRENT_VERSION = 'gem_v2.6_stable';
     const savedVersion = localStorage.getItem('gem_app_version');
     
     if (savedVersion !== CURRENT_VERSION) {
-      localStorage.clear(); // Clear old 'Enquire' typos from cache
+      // Clear old data safely
+      localStorage.clear(); 
       localStorage.setItem('gem_app_version', CURRENT_VERSION);
       localStorage.setItem('gem_persistence_v3', JSON.stringify(initialContent));
-      window.location.reload(); // Reload to apply fresh hard-coded content
-    }
-
-    const saved = localStorage.getItem('gem_persistence_v3');
-    if (saved) {
-      setContent(JSON.parse(saved));
+      
+      // We don't reload immediately to prevent potential loops
+      setContent(initialContent);
       setLastSaved(new Date());
+    } else {
+      const saved = localStorage.getItem('gem_persistence_v3');
+      if (saved) {
+        try {
+          setContent(JSON.parse(saved));
+          setLastSaved(new Date());
+        } catch (e) {
+          console.error("Failed to parse saved content", e);
+          setContent(initialContent);
+        }
+      }
     }
   }, []);
 
