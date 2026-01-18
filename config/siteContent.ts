@@ -3,19 +3,19 @@ export const siteContent = {
   brand: {
     name: "GEM Events",
     tagline: "Global Events Management",
-    logoUrl: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=200", // Default placeholder logo
+    logoUrl: "https://drive.google.com/thumbnail?id=1q9p0giYQIHFqcfj1Gb_FU52Me4sL6qZT&sz=w1000",
     philosophy: "We do not provide a service. We provide an experience.",
     cumulativeExperience: "50 years of cumulative team experience"
   },
   hero: {
-    title: "The Art of Distinction",
-    subtitle: "Bespoke event management across Africa, Europe, and Asia. From intimate retreats to grand spectacles of 1,000+.",
+    title: "Gems need a Jeweler",
+    subtitle: "Every Gem needs its Jeweler. From intimate retreats to 1,000+ guest galas, we polish world-class experiences across Africa, Europe, and Asia.",
     backgroundImage: "https://images.unsplash.com/photo-1544111325-4a69622d1e28?auto=format&fit=crop&q=80&w=2000"
   },
   philosophy: {
     badge: "A Once in a Lifetime Promise",
-    title: "Not a Service. An Experience.",
-    mainText: "If you are looking for a partner to manage every intricate detail of your journey, you have landed on the right page. We curate more than 50 years of cumulative team experience to deliver precision-engineered events and leisure activities.",
+    title: "Not a Service, but an Experience.",
+    mainText: "If you are looking for a partner to manage every minute of your journey, you have landed on the right page. We curate more than 50 years of cumulative team experience to deliver precision-engineered Concierge service events and leisure activities.",
     cards: [
       {
         id: "01",
@@ -36,22 +36,36 @@ export const siteContent = {
   },
   stickySection: {
     backgroundImage: "https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&q=80&w=2000",
-    title: "Unrivaled Experiences",
+    title: "Egypt Unrivaled Experiences",
     items: [
       {
-        title: "Private Giza Gala",
+        title: "The Great Pyramids of Egypt",
         location: "The Great Pyramids, Egypt",
-        description: "An exclusive evening dinner under the stars at the base of the Sphinx, featuring world-class catering and private symphonic performances."
+        description: "Enjoy having Breakfast/ Lunch while watching the great pyramids of Egypt, with a private concierge tour guide. Visit the GEM ( the Grand Egyptian Museum ) and enjoy the spectacular monuments of the Pharaohs"
       },
       {
         title: "Nile Sophistication",
         location: "Luxor & Aswan, Egypt",
         description: "Private charter of a luxury Dahabiya. Navigate the timeless waters of the Nile with sunset cocktails and candlelit temple explorations."
+      },
+      {
+        title: "The Emerald Blue water of the Red Sea",
+        location: "Hurghada, Egypt",
+        description: "Whether you like the luxury of all inclusive resort experience, or you like waking up inside the water, in a Bungalow inside the sea."
       }
     ]
   },
   booking: {
     title: "Let Us Manage The Details",
-    description: "From global logistics to the finest artistic touches, we handle everything. Share your vision and let our decades of experience take the helm."
+    description: "From global logistics to the finest artistic touches, we handle everything. Share your vision and let our decades of experience take the helm.",
+    email: "info@gem-events.com",
+    phone: "+20122347373",
+    whatsapp: "20122347373"
+  },
+  footer: {
+    description: "Premium Event Management & Global Bespoke Travel Concierge based in Egypt.",
+    copyright: "2024 GEM Events. Crafted for Distinction.",
+    instagram: "globaleventsmanagment",
+    facebook: "global events management"
   }
 };
