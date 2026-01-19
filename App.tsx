@@ -65,18 +65,15 @@ const App: React.FC = () => {
 
   if (currentView === 'experience') {
     const firstItem = content.stickySection.items[0];
-    const videoUrl = (firstItem as any)?.videoUrl || '';
     return (
       <div className="bg-black min-h-screen">
         <Navbar logoUrl={content.brand.logoUrl} onNavigate={setCurrentView} />
-        {videoUrl && (
-          <ExperiencePage 
-            videoUrl={videoUrl} 
-            title={firstItem.title}
-            description={firstItem.description}
-            onBack={() => setCurrentView('home')}
-          />
-        )}
+        <ExperiencePage 
+          videoUrl={(firstItem as any)?.videoUrl} 
+          title={firstItem.title}
+          description={firstItem.description}
+          onBack={() => setCurrentView('home')}
+        />
         <Footer logoUrl={content.brand.logoUrl} content={content.footer} />
       </div>
     );

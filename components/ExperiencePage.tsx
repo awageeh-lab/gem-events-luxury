@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowLeft, Sparkles } from 'lucide-react';
 
 interface ExperiencePageProps {
-  videoUrl: string;
+  videoUrl?: string;
   title: string;
   description: string;
   onBack: () => void;
