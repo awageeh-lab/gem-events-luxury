@@ -1,0 +1,7 @@
+{
+  "name": "GEM Events | Luxury Egyptian Management",
+  "description": "High-end bespoke event management and concierge based in Cairo. Experience the art of distinction with our AI-powered planning suite.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
