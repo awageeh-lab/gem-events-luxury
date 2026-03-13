@@ -1,16 +1,16 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build && cp public/googleb713242fafde5eae.html dist/",
   "outputDirectory": "dist",
   "framework": "vite",
   "installCommand": "npm install",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/googleb713242fafde5eae.html",
-      "destination": "/googleb713242fafde5eae.html"
+      "src": "/googleb713242fafde5eae.html",
+      "dest": "/googleb713242fafde5eae.html"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
